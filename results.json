@@ -1,0 +1,27 @@
+{
+  "n_train_patients": 90,
+  "n_test_patients": 60,
+  "n_predictions": 4024,
+  "event_rate": 0.21669980119284293,
+  "target_mmHg": 135.0,
+  "note": "SYNTHETIC data; results reflect the generator, not clinical validity.",
+  "MAE_twin": 4.253239204192148,
+  "MAE_twin_oracle": 3.959244741608603,
+  "MAE_persist": 5.441326805789518,
+  "MAE_ma7": 4.32838980629348,
+  "MAE_ma7_oracle": 4.012812889976836,
+  "AUROC_twin": 0.937107428514879,
+  "Brier_twin": 0.07504107428806162,
+  "AUROC_twin_oracle": 0.9469882963489034,
+  "Brier_twin_oracle": 0.06975823710701799,
+  "AUROC_persist": 0.9035307420947236,
+  "Brier_persist": 0.09868370285617456,
+  "AUROC_ma7": 0.9347072486378242,
+  "Brier_ma7": 0.07611007403629601,
+  "AUROC_ma7_oracle": 0.945514425091976,
+  "Brier_ma7_oracle": 0.07070486887305988,
+  "fitted_beta_sleep_steps": [
+    -1.1418181024435072,
+    -0.5599290605954271
+  ]
+}
