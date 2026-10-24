@@ -22,11 +22,28 @@ See `RESEARCH.md`. Many public submissions found for this challenge focus on dia
 4. **Forecast:** Gaussian next-morning SBP and P(SBP >= target), with contributions (EHR prior, learned level, sleep, steps).
 5. **Scenario:** what-if sleep/steps using learned associations (illustrative, not causal).
 
+## Technical stack
+
+- **Language:** Python
+- **Dashboard:** Streamlit
+- **Data processing:** NumPy, Pandas
+- **Statistical modelling:** scikit-learn / Statsmodels (as used in the implementation)
+- **Visualisation:** Plotly (if used in the implementation)
+- **Testing:** pytest, Streamlit AppTest
+- **Model:** OLS-based EHR prior and Kalman local-level state-space filter
+
+See `requirements.txt` for the complete dependency list.
+
 ## Data
 Fully synthetic and seeded (`src/generate_data.py`, seed 2026): 150 patients x 90 days. Sleep/steps effects are assumed, not clinical findings. `data/*.csv` is generated output.
 
 ## Architecture
-`docs/architecture.pdf`, see `ARCHITECTURE.md`.
+
+- [Architecture and system design](ARCHITECTURE.md)
+
+## Presentation
+
+- [View or download the project presentation (PPTX)](PRESENTATION.pptx)
 
 ## Evaluation and actual results
 **Split:** 150 synthetic patients; parameters (including baseline residual SDs) are fit on the first 90 patients only; the other 60 patients (disjoint) are the test set. Test is forward in time, 14-day warm-up, 4,024 predictions on days with a valid reading (event rate 21.7%). Run: `python -m src.evaluate` (writes `results.json`). Single seed, no confidence intervals.
