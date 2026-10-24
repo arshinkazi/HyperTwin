@@ -80,7 +80,7 @@ Dashboard: choose a held-out patient, drag the replay slider, add an observation
 No real patients, no clinical validation, simple Gaussian level model, no treatment effects. Future: real licensed home-BP data, covariate forecasting, calibration checks, clinician feedback.
 
 ## Demo video
-[VIDEO LINK PENDING: not recorded.]
+https://youtu.be/05dTII_YgOA
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
